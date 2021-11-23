@@ -17,6 +17,8 @@
 		278F5F39274DA24C00969C31 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278F5F38274DA24C00969C31 /* ComplicationController.swift */; };
 		278F5F3B274DA24D00969C31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278F5F3A274DA24D00969C31 /* Assets.xcassets */; };
 		278F5F3E274DA24D00969C31 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278F5F3D274DA24D00969C31 /* Preview Assets.xcassets */; };
+		278F5F50274DA2DA00969C31 /* NotesOnNotes.md in Resources */ = {isa = PBXBuildFile; fileRef = 278F5F4E274DA2D900969C31 /* NotesOnNotes.md */; };
+		278F5F51274DA2DA00969C31 /* notesPictures in Resources */ = {isa = PBXBuildFile; fileRef = 278F5F4F274DA2D900969C31 /* notesPictures */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		278F5F3D274DA24D00969C31 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		278F5F3F274DA24D00969C31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		278F5F40274DA24D00969C31 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		278F5F4E274DA2D900969C31 /* NotesOnNotes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = NotesOnNotes.md; sourceTree = "<group>"; };
+		278F5F4F274DA2D900969C31 /* notesPictures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = notesPictures; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,8 @@
 		278F5F15274DA24900969C31 = {
 			isa = PBXGroup;
 			children = (
+				278F5F4E274DA2D900969C31 /* NotesOnNotes.md */,
+				278F5F4F274DA2D900969C31 /* notesPictures */,
 				278F5F24274DA24900969C31 /* Notes WatchKit App */,
 				278F5F2F274DA24C00969C31 /* Notes WatchKit Extension */,
 				278F5F1D274DA24900969C31 /* Products */,
@@ -239,6 +245,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				278F5F50274DA2DA00969C31 /* NotesOnNotes.md in Resources */,
+				278F5F51274DA2DA00969C31 /* notesPictures in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
