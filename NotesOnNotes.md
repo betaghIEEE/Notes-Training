@@ -138,6 +138,21 @@ The fourth input is an external keyboard from a paired iPad or iPhone.  This is 
 
 Let the coding begin.
 ##  Data Model
-First, we start with some housekeeping, select the content view file from the Project Navigator.
+First, we start with some housekeeping, select the content view file from the Project Navigator and let's create a new group from the selection.  Give it a name and save it.  So why was Notificiation View not included also?
+Next, we make a group for the data model.  In this case, we call it Model.  We then add a new Swift file to this group. Name the new Swift file Note and ensure that it has the target Notes WatchKit Extension.   We then create a struct to encapsulate the data model for the app.  Now, we can select the content view file and keep going along the proces.
+
+## Text Field and Button
+First of all, we need to mark all the main possible bidings sections for the form before hand to keep track of what's going on later.  These areas include the following:
+        *   property 
+        *   function,
+        *   content body,
+        *   Preview
+           
+
+All right, after all of this, we're going to create two properties. one for the note's and another one for the text field. 
+
+Notice something in the preview canvas.
+
+Time Index 4:49
 
 

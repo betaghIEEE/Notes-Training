@@ -19,6 +19,7 @@
 		278F5F3E274DA24D00969C31 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278F5F3D274DA24D00969C31 /* Preview Assets.xcassets */; };
 		278F5F50274DA2DA00969C31 /* NotesOnNotes.md in Resources */ = {isa = PBXBuildFile; fileRef = 278F5F4E274DA2D900969C31 /* NotesOnNotes.md */; };
 		278F5F51274DA2DA00969C31 /* notesPictures in Resources */ = {isa = PBXBuildFile; fileRef = 278F5F4F274DA2D900969C31 /* notesPictures */; };
+		278F5F55274F055A00969C31 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278F5F54274F055A00969C31 /* Note.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		278F5F40274DA24D00969C31 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		278F5F4E274DA2D900969C31 /* NotesOnNotes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = NotesOnNotes.md; sourceTree = "<group>"; };
 		278F5F4F274DA2D900969C31 /* notesPictures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = notesPictures; sourceTree = "<group>"; };
+		278F5F54274F055A00969C31 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,8 +126,9 @@
 		278F5F2F274DA24C00969C31 /* Notes WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				278F5F53274F04C600969C31 /* Model */,
 				278F5F30274DA24C00969C31 /* NotesApp.swift */,
-				278F5F32274DA24C00969C31 /* ContentView.swift */,
+				278F5F52274F040200969C31 /* View */,
 				278F5F34274DA24C00969C31 /* NotificationController.swift */,
 				278F5F36274DA24C00969C31 /* NotificationView.swift */,
 				278F5F38274DA24C00969C31 /* ComplicationController.swift */,
@@ -143,6 +146,22 @@
 				278F5F3D274DA24D00969C31 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		278F5F52274F040200969C31 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				278F5F32274DA24C00969C31 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		278F5F53274F04C600969C31 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				278F5F54274F055A00969C31 /* Note.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +298,7 @@
 				278F5F39274DA24C00969C31 /* ComplicationController.swift in Sources */,
 				278F5F31274DA24C00969C31 /* NotesApp.swift in Sources */,
 				278F5F37274DA24C00969C31 /* NotificationView.swift in Sources */,
+				278F5F55274F055A00969C31 /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
