@@ -154,5 +154,32 @@ All right, after all of this, we're going to create two properties. one for the 
 Notice something in the preview canvas.
 
 Time Index 4:49
+Ok, why is the Notes navigation title note showing in the preview.  Well, it shows up in the simulator.  
+
+This is a content wrapper.  It is also a new navigation title.  However, the instructor's preview shows this correctly.  Mine does not.  Why?
+
+The accent color scene works on this wrapper, at least in the simulator.  
+The instructor says to replace the hello world text field with a horizontal stack with a new textfield inside.  The stack also needs a button inside.
+Both the text fields appearance and the button are totally different on the Apple Watch as opposed to the iPhone and iPad. The operating system describes how each user interface elements should look.  Keep in mind that these two UI elements are quite different on the watchOS platform than on the iOS, iPadOS, tvOS, and macOS.  
+
+We put the text field and the button beside each other in a horizontal stack container.   This entails that the two items widths are identical.  To change this default behavior, we need to add a specific modifier to the button.  In this case, we give it a fixed size.  We can also add some color.
+There are other ways to apply a modifier to the button and other enclosures to make this app look well. 
+These augments on the image, let alone the change to another system image for the plus within a circle, do add some crisp appearances to this watch app.
+The instructor wants to next push the textfield and combo field up to the top with a new spacer.
+
+## Testing the App
+Time Index 8:54
+My app appears similar to the instructor, but with some so OS changed effects.  
+
+## Button's Action
+Making the button useful for us, it's not enough to say that we need to save a new note on the watch.  That is why we need to think about all potential steps that our code should do step by step.
+Can we declare all steps in plain English?  What should the code do to accomplish this task?  It is time to make a list that will declare all parts of these algorithms.   This activity in computer science is also described as making pseudocode.  
+
+The first step in this action is the follow.  
+
+Knowing what our code should do step by step before hand will make our job mcuh more straightforward (than writing codes mindlessly.)  
+Time index 11:30/17:46
+
+##  Algorithm
 
 
