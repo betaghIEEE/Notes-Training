@@ -182,4 +182,27 @@ Time index 11:30/17:46
 
 ##  Algorithm
 
+We start with the first operation following by the other ones, enter the following code.  
+As you noticed, this one line of in the "guard" command replaces the use of a complete if statement.
+If the text fields is still empty, then our code will stop running in this action.  The rest of the clauses code will not be executed since we escaped from it. 
 
+Note, that the save the notes (function) does require a member method in the module.  
+The instructor observes that the subject of save can't be properly covered without covering how to retrieve them from local storage.  Since this would make this tutorial extemely lengthy, therefore we should focus on a quicker way to do the job.
+Don't forget that at this point, our goal is to call this safe function each time when the user creates a new note and be sure that this algorithm works well without any glitches.  
+What do you think about the possible ways to do that?  That said, wouldn't it be great if we could print out somehow in the console the notes and make sure code logic works correctly?  We can use the print method for this.  
+But, the instructor would like to introduce us to a slightly better way to do that.
+
+
+Time Index 15:07/ 17:46
+
+We can see evidence that each entrance into the add note followed by tapping the plus circle button.  We can see this action increasing the count for the notes.  
+
+# Storing and Reading Data with SwiftUI on Apple Watch
+
+
+
+#   Create A Detail View For A Note
+
+#   Create Credits View
+
+#   Develop A New Feature and Settings Page
