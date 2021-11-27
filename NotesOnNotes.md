@@ -263,8 +263,19 @@ Now time for another test of this demo app.
 Well, when I add three items, then it gets ugly.  
 
 Time to commit to the repository so we can us this feature to trail back and make sense of the work.
+Time Index 13:13
 
 ## Deleting Notes
+This note app gets better and better now the next useful feature that we will develop is the note deleting functionality.  Jump back to Xcode and let us create this new function for this feature. 
+Notice the delete method function.  We include some needed code within an "withAnimation" modifier. 
+We make a call to the array to remote an element at "offsets".  This is of type Index Set that allows us to include more than one index offset.
+
+We also need a call for this function.  So we make it as a modifier of list component in the body.
+
+Now time to commit again to the repository and test these features.
+
+## Testing
+ 
 
 #   Create A Detail View For A Note
 
