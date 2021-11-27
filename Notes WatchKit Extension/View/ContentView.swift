@@ -16,9 +16,53 @@ struct ContentView: View {
     
     // MARK:-   Function
     
+    func getDocumentDirectory() -> URL {
+        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return path[0]
+    }
+    
     func save() {
-        dump(notes)
+        //dump(notes)
+        
+        do{
+            //  1.  Convert the notes array to data using JSONEncoder
+            let data = try JSONEncoder().encode(notes)
+            //  2.  Create a new URL to save the file using the getDocumentDirectory.
+            
+            let url = getDocumentDirectory().appendingPathComponent("notes")
+                      
+            
+            //  3.  Write the data to the given URL
+            try data.write(to: url)
+            
+        } catch {
+            print("Saving data has failed!")
+        }
          
+    }
+    
+    func load() {
+        DispatchQueue.main.async {
+            
+            do{
+                //  1.  Get the notes URL path
+                let url = getDocumentDirectory().appendingPathComponent("notes")
+                
+                //  2.  Create the new property for the data
+                
+                let data = try Data(contentsOf: url)
+                
+                
+                //  3.  Decode the data
+                
+                try notes = JSONDecoder().decode([Note].self, from: data)
+                
+                
+            } catch {
+                // Do nothing?
+                print("Did not load the file properly!")
+            }
+        }
     }
         
     //  MARK:   - BODY
@@ -66,6 +110,9 @@ struct ContentView: View {
             Text("\(notes.count)")
         } //: VSTACK
         .navigationTitle("Notes")
+        .onAppear(perform: {
+            load()
+        })
     }
 }
 

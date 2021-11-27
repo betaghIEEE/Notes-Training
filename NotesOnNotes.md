@@ -197,7 +197,55 @@ Time Index 15:07/ 17:46
 
 We can see evidence that each entrance into the add note followed by tapping the plus circle button.  We can see this action increasing the count for the notes.  
 
-# Storing and Reading Data with SwiftUI on Apple Watch
+# Learn How to Store and Read Data with SwiftUI on Apple Watch
+The instructor begins with a demo.  We can open the app in the simulator.  Then test the text entry by dictating some sentence.   
+After producing this content, we can demonstrating the save operation by tapping the circle plus button.  All of the actions of the button then occur.  This action creates a note structure with the text and an unique ID. Note, every class in a Core Data structure has an UUID as a hidden element. 
+The instructor's application demo shows a new note has replaced the icon on previous empty home page.  Our previous model simply has a text label with the notes array member count. 
+Notice that the list with the notes is totally different from its iOS/iPadOS counterparts.
+The notes list structure / container also has a swipe left to reveal a delete button.
+Thus the instructor tells us that this section carries steps to make this starter page fully function with these capabilities.  This kind of page is the objective for this example app.
+
+## Data File
+This example does note use Core Data or other web services to store data in a persistent online database.  Therefore, this app stores its data locally as a data file.  
+Fortunately, it does not make it hard to do it all with the use of the Codable Protocol.  But before we start decoding and encoding each new note, first we need to know where to save the data file on the watch.  How do we know the strucutre and file system management of the watch?  
+
+## watchOS Sandbox
+When you develop apps for the Apple Watch, then you should keep in mind that watchOS runs in a so-called sandbox.  This is basically a protected file system that prevents us from simply navigating to specific files.
+ 
+
+##  Document Directory
+Time Index 2:01 
+
+Instead, we must run some specific code to ask for the targeted apps document directory. It is an unique directory allocated for each watch app and this is where we can write and read data files.
+All that said, please this method to the function section of the Content View struct/module. 
+Notice the method function getDocumentDirectory sets up a constant path to the document directory in the user domain.  
+Obvious question, Swift uses a notion of optionals to handle cases where a nil is returned instead of loaded data type.  The nil is technically a member of said data type and exists to handle the absense of data.
+The zero index on path grabs the first neutral site where the file manager permits storing and reading of data.  This method permits any kind of URL such as web URLs and locations for local files stored directly on the Apple Watch.
+
+## Encoding Data 
+Now, after we know where to write the notes data file, we can go back to editing the previously created save function. 
+Second, we will create a new do-catch statement so that we can run our code safely inside it later on.
+
+Explanation time index 5:02
+
+## Decoding Data
+This is a similar process to the writing.  The same coding protocol provides the structure for marshaling in the data.   We create a new function with the proper error handling we call later.
+Notice that our catch block can do nothing because it is not a problem if there is no data file found.  This implies that if no such file is found, the assumption is that the app is running for the first time and does not have one.  The erasing of the notes from the array also results in removing the file.  Therefore, the load process can not find such a file and must make a new one.
+We lay down some pseudocode to outline the needed steps that our code shall fulfill.   We note this first in the do block.
+Observe the code made for these steps.  This is similar to its Objective-C counterpart.  
+
+Also note, that we have just create a new load function that should be called when the content view appears on the Apple Watch.  
+If we call this function immediately using the on appear view modifier, then SwiftUI will get confused.  Why?  The app is changing the program state immediately and it could crash the application.  To avoid it from, we need to add some delay before we load the notes from local storage.  This time interval could be such as short, like a few milliseconds so that users could not notice the delay.  Therefore, our code will run without crashing itself.    We can make this happen with a notion of a dispatch queue used for the purpose of multitask operations.
+
+## Dispatch Queue 
+Time Index 8:10
+
+Let us make the multitask and delay handling happen by wrapping our code into a new method called dispatch queue.  First of all, select all of the code inside the load function, then cut this code into the clipboard.  
+The Grand Central Dispatch, of which dispatch queue is a part of, was unveiled by Apple in WWDC 2008.  The GCD also introduced into Objective C the notion of a closure.  Admittedly, I was thrown for a loop when I first saw this at WWDC 2008.  Look this good stuff on the Apple Documentation as part of the help functionality.
+This method tells watchOS to run the actions at the next possible opportunity, that is not right now.  In a nutshell, we will run these actions and change the program state with a millisecond delay.  This is done to protect the Notes app from crashing.  We call this load function with a new on appear modifier.
+There is nothing more satisfying in app development than we can see our app work.  That all said, it is time build and run the project to test it.
+
+##  Testing
 
 
 
