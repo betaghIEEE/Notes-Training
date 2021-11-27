@@ -246,8 +246,25 @@ This method tells watchOS to run the actions at the next possible opportunity, t
 There is nothing more satisfying in app development than we can see our app work.  That all said, it is time build and run the project to test it.
 
 ##  Testing
+Notice the load function is called twice during the test.  Granted, I added two note items to the list.  
+But, when I run the app a second time, the app shows that there are two items in the array.
+The instructor's demo went something like this.
+Run the app in the simulator.  Enter some new notes using on of the input methods.  Then close the app by tapping on the side button on the watch.  This gives us the means to close the app.  We simply slide left on the application in the running apps list.  Then we tap on the "X" button to close the app.  Then, we run the app again.
 
+In the second half of this tutorial, our goal is to create a new list on this page and populate it all the notes from the local data file.
 
+## Notes List 
+Time index 10:57 
+We can replace the text view at the end of the vertical stack with a new list structure / component to represent the items already in the notes.
+We create a List component and this also has an closure to serve as a container.  We use a for each loop to account for each item in the notes array.  
+We make an horizontal stack with a capsule and text view for the specific text member of the Note item at the index of the array.   We also apply some modifiers to the capsule and text view.
+Now time for another test of this demo app.
+
+Well, when I add three items, then it gets ugly.  
+
+Time to commit to the repository so we can us this feature to trail back and make sense of the work.
+
+## Deleting Notes
 
 #   Create A Detail View For A Note
 
