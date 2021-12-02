@@ -332,4 +332,16 @@ We get a cancel button for free on this credit sheet.  On running the preview, w
 
 
 #   Develop A New Feature and Settings Page
-This is the last section in this demonstration app.  It is indeed a pretty important feature that we develop for the watchOS app.  
+This is the last section in this demonstration app.  It is indeed a pretty important feature that we develop for the watchOS app.  When a user taps on the gear button, then a new setting sheet will show up.  And in this setting sheet, users can set the maximum number of lines in each row in the list view using a SwiftUI slider.  This also gives us experience building a custom binding in the Swift programming language.
+We could use this tutorial for our own portfolio (it is a class and academic honesty should exist somewhere.)  The notes app and notes acquired in the class is for personal edification.  None the less, the instructor thinks this is the proper way to do binding of a settings page.
+
+We create a new view module and call it SettingsView.
+We add a vertical stack to the body and use the header view to reuse a component in this view.  
+We also have comments in the vertical stack to outline our basic approach to making this settings page.
+We also need a new line count to properly store the current value.   
+## App Storage
+We use a binding to the app storage to enable a value to carry through as essentially a global value.  The default value of the line number count is 1.  As a matter of fact, this value is stored in a rather permenant manner on the Apple Watch, with our app.  The app storage property wrapper uses the user defaults under the hood and it has a major benefit as follows.  
+The app storage automatically invokes the viewer's body property when the line count key changes in user defaults, and it will refresh the user interface immediately.  In our case, when users increase or decrease the maximum line number, then the notes app will automatically be refreshed with the requested modification.  
+Time index 3:24
+Of course, to make this happen with the use of the slider is not as simple as that.  Yet, this is manageable.
+ 

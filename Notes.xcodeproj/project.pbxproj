@@ -20,6 +20,10 @@
 		278F5F50274DA2DA00969C31 /* NotesOnNotes.md in Resources */ = {isa = PBXBuildFile; fileRef = 278F5F4E274DA2D900969C31 /* NotesOnNotes.md */; };
 		278F5F51274DA2DA00969C31 /* notesPictures in Resources */ = {isa = PBXBuildFile; fileRef = 278F5F4F274DA2D900969C31 /* notesPictures */; };
 		278F5F55274F055A00969C31 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278F5F54274F055A00969C31 /* Note.swift */; };
+		27F2431B2759690E0058A959 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F2431A2759690E0058A959 /* DetailView.swift */; };
+		27F2431D27597CE30058A959 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F2431C27597CE30058A959 /* CreditsView.swift */; };
+		27F2432027597E320058A959 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F2431F27597E320058A959 /* HeaderView.swift */; };
+		27F2432227598AA30058A959 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F2432127598AA30058A959 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +85,10 @@
 		278F5F4E274DA2D900969C31 /* NotesOnNotes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = NotesOnNotes.md; sourceTree = "<group>"; };
 		278F5F4F274DA2D900969C31 /* notesPictures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = notesPictures; sourceTree = "<group>"; };
 		278F5F54274F055A00969C31 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		27F2431A2759690E0058A959 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		27F2431C27597CE30058A959 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
+		27F2431F27597E320058A959 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		27F2432127598AA30058A959 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +134,7 @@
 		278F5F2F274DA24C00969C31 /* Notes WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				27F2431E27597E1E0058A959 /* Component */,
 				278F5F53274F04C600969C31 /* Model */,
 				278F5F30274DA24C00969C31 /* NotesApp.swift */,
 				278F5F52274F040200969C31 /* View */,
@@ -152,6 +161,9 @@
 			isa = PBXGroup;
 			children = (
 				278F5F32274DA24C00969C31 /* ContentView.swift */,
+				27F2431A2759690E0058A959 /* DetailView.swift */,
+				27F2431C27597CE30058A959 /* CreditsView.swift */,
+				27F2432127598AA30058A959 /* SettingsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -162,6 +174,14 @@
 				278F5F54274F055A00969C31 /* Note.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		27F2431E27597E1E0058A959 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				27F2431F27597E320058A959 /* HeaderView.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,9 +314,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				278F5F35274DA24C00969C31 /* NotificationController.swift in Sources */,
+				27F2432027597E320058A959 /* HeaderView.swift in Sources */,
 				278F5F33274DA24C00969C31 /* ContentView.swift in Sources */,
 				278F5F39274DA24C00969C31 /* ComplicationController.swift in Sources */,
+				27F2431B2759690E0058A959 /* DetailView.swift in Sources */,
+				27F2432227598AA30058A959 /* SettingsView.swift in Sources */,
 				278F5F31274DA24C00969C31 /* NotesApp.swift in Sources */,
+				27F2431D27597CE30058A959 /* CreditsView.swift in Sources */,
 				278F5F37274DA24C00969C31 /* NotificationView.swift in Sources */,
 				278F5F55274F055A00969C31 /* Note.swift in Sources */,
 			);
