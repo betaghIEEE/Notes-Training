@@ -12,6 +12,7 @@ struct SettingsView: View {
     
     @AppStorage("lineCount") var lineCount : Int = 1
     
+    @State private var value: Float = 0
     
     //  MARK:   - BODY
     
@@ -20,8 +21,13 @@ struct SettingsView: View {
             // HEADER
             HeaderView(title: "Settings")
             // ACTUAL LINE COUNT
-            
+            Text("Lines: \(lineCount)".uppercased())
+                .fontWeight(.bold)
             // Slider
+            Slider(value: $value, in: 1...4, step: 1)
+                .accentColor(.accentColor)
+            
+            
         } //: VSTACK
     }
 }

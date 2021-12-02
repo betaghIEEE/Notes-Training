@@ -345,3 +345,10 @@ The app storage automatically invokes the viewer's body property when the line c
 Time index 3:24
 Of course, to make this happen with the use of the slider is not as simple as that.  Yet, this is manageable.
  
+## Current Line Count
+Now, let's continue the work with the second section in the layout, shall we?  Our goal is to display the actual line number in the list item.  To do this, first, go to the body and enter the following code.  
+
+## Slider View 
+When we add code for the slider and value state, we use the preview to observe this change.   This new slider has some properties in the settings page.  Why doesn't the preview show the slider in our accent color?  We show this in the setting sheet.
+## Setting Sheet
+Notice the code we add to the gear image in Detail View.  We also add a state variable for isSettingPresented.   This allows us to use the sheet and on tap gestures like we did for info-circle.   Now, we can test this code.  But, how do we connect the value of the slider to the app storage line count?
