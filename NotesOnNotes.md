@@ -352,3 +352,8 @@ Now, let's continue the work with the second section in the layout, shall we?  O
 When we add code for the slider and value state, we use the preview to observe this change.   This new slider has some properties in the settings page.  Why doesn't the preview show the slider in our accent color?  We show this in the setting sheet.
 ## Setting Sheet
 Notice the code we add to the gear image in Detail View.  We also add a state variable for isSettingPresented.   This allows us to use the sheet and on tap gestures like we did for info-circle.   Now, we can test this code.  But, how do we connect the value of the slider to the app storage line count?
+## Testing
+Sure enough, we can navigate with a note and find the setting and info page work, to a point.  We see the slider moving, but the number does not change.   So what do we do?
+
+## Update Function
+The next step is to create a new function that will make this feature work into the 
