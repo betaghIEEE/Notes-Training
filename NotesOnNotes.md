@@ -291,8 +291,45 @@ One should try to regenerate the error of a last note deletion.  Does the else c
 #   Create A Detail View For A Note
 A 10 minute lesson.
 
+First, we make a "model" for the detailed view.  There are many ways to devise such views.  One could have more than one view for each entity.  For example, there can be edit views, list element views, and detail views to facilitate working with an entity or some other elements.
 
+With the sample data supplied to the Detail View, we can produce a preview to guide development. For example, a good detail view for the Note would entail a vertical stack.
+There is nothing visible in the photos so far.  Now let us add some UI elements to it.
+As you can notice, we wrapped it into a vertical scroll view so that we can read the note no matter how long it is, the final part that we need to develop is the footer.
+
+We have in the header some capsules to form a left and right line surrounding a text image.
+
+We have a gears button to the left and a credits button to the right.  In the center, we have text to represent what note out of the array we are looking at.
+This finishes the layout for the detailed view.  
+This is a kind of unsexy detail view.  In many cases, that is just fine and serves the purpose.  This enough to make the view look light weight and professional.  The watch face has little room for clutter.
+This is just the layout and design for this detailed view.  Now, we need to tie this to the homepage.
+
+## Navigation Link
+We add a container around the horizontal stack in the for-each list (in the content view body).   In particular, we select the NavigationLink container.  Here we can specify the destination for the link, namely our Detail view.  Next, we test this feature.
+
+## Testing 
+We add a note to allow us some material to test with.  The new note in the list allows us to tap and get a detailed view.  Thre is automatically placed in an arrow to return to the main content view.
+However, we don't have functionality for the bottom icons.  
+
+This work is for the remaining two sections.
 
 #   Create Credits View
+We create a new SwiftUI file called CreditsView.  There is nothing special about this view, but we do need it to exist for user edification. 
+We make a new vertical stack in the body and start developing a new header component.  Also, we apply spacing in the call for the vertical stack.
+## Header Component
+
+We create a variable to manage title displays.  We also add a conditional to put a textview with the title, if the title is not empty.
+## New Headers
+The new headers we need.  We add the Header View with a title of credits.  Next, we add text views for our name and title.  Last we work on a profile image.  This image will require some artistic modification. 
+
+## Now, let us get down to business.  Let's add a new image to this view with some modifiers.  We need resizeable and scale to fit.  The resizeable allows us to include this in the vertical stack and stay within a reasonable watch face size. 
+We can check out the first illustration in the preview now.
+We also need 2 properties for the sake of practicing swift programming. 
+
+##  The watchOS Sheet
+We first add a state variable to the detail view.  Namely, we define isCreditsPresented.  Then we add a tap gesture option to the info image to toggle this value each time the user taps on it.  So insert the onTapGesture with a instruction to toggle the isCreditsPresented.  Now, how do we make the credits sheet call?
+We get a cancel button for free on this credit sheet.  On running the preview, we can tap on the info icon and get the credits sheet.   When we tap on the cancel button, the credit sheet is dismissed.
+
 
 #   Develop A New Feature and Settings Page
+This is the last section in this demonstration app.  It is indeed a pretty important feature that we develop for the watchOS app.  
