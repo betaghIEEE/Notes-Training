@@ -114,19 +114,31 @@ struct ContentView: View {
             }   //: HSTACK
             Spacer()
             
-            List {
-                ForEach(0..<notes.count , id: \.self ) {i in
-                    HStack {
-                        Capsule()
-                            .frame(width: 4)
-                            .foregroundColor(.accentColor)
-                        Text(notes[i].text)
-                            .lineLimit(1)
-                            .padding(.leading, 5)
-                        
-                    } //: HSTACK
-                } //: Loop
-                .onDelete(perform: delete)
+            if notes.count >= 1{
+                List {
+                    ForEach(0..<notes.count , id: \.self ) {i in
+                        HStack {
+                            Capsule()
+                                .frame(width: 4)
+                                .foregroundColor(.accentColor)
+                            Text(notes[i].text)
+                                .lineLimit(1)
+                                .padding(.leading, 5)
+                            
+                        } //: HSTACK
+                    } //: Loop
+                    .onDelete(perform: delete)
+                    
+                }
+            } else {
+                Spacer()
+                Image(systemName: "note.text")
+                    .resizable()
+                    .scaledToFit()
+                    .foregroundColor(.gray)
+                    .opacity(0.25)
+                    .padding(25)
+                Spacer()
                 
             } //: List
         } //: VSTACK

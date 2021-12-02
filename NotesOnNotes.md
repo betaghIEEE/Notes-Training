@@ -275,9 +275,23 @@ We also need a call for this function.  So we make it as a modifier of list comp
 Now time to commit again to the repository and test these features.
 
 ## Testing
- 
+During testing, I was able to generate an error when I reached the last item to delete.  So, how do we catch for this kind of error?
+Time Index 14:32 / 17:31
+
+## Empty State
+? Does this help eliminate the error produced when trying to delete the last item?
+We add a conditional wrapper around the loop.  This is a simple if-else state conditional on notes.count being greater than or equal to 1 (or greater than 0).   
+On testing, this little conditional does help by catching the empty state.  If I try to delete the last entry, the empty view ensures that I don't have another entry or its ghost to make false deletion possible.
+
+We also add a portion of spacers and images in the else part.  Careful to select the system name image correctly.  One can try to ask for an image that is not there, and Apple will catch the error by returning nothing.   Also, the modifiers added can be adjusted to account for smaller watch faces.
+
+## Final Test
+One should try to regenerate the error of a last note deletion.  Does the else condition fire?  Do we get the error?  
 
 #   Create A Detail View For A Note
+A 10 minute lesson.
+
+
 
 #   Create Credits View
 
