@@ -14,6 +14,9 @@ struct ContentView: View {
         
     @State private var text: String = ""
     
+    
+    @AppStorage("lineCount") var lineCount : Int = 1
+    
     // MARK:-   Function
     
     func getDocumentDirectory() -> URL {
@@ -78,7 +81,7 @@ struct ContentView: View {
         
         
         VStack {
-            HStack(alignment: .center, spacing: 6) {
+            HStack(alignment:/*@START_MENU_TOKEN@*/ .center /*@END_MENU_TOKEN@*/, spacing: 6) {
                 TextField("Add New Note ", text: $text)
                 
                 Button {
@@ -123,7 +126,7 @@ struct ContentView: View {
                                     .frame(width: 4)
                                     .foregroundColor(.accentColor)
                                 Text(notes[i].text)
-                                    .lineLimit(1)
+                                    .lineLimit(lineCount)
                                     .padding(.leading, 5)
                                 
                             }

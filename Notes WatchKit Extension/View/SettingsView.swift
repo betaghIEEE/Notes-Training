@@ -14,6 +14,11 @@ struct SettingsView: View {
     
     @State private var value: Float = 0
     
+    //  MARK:   - FUNCTION
+    func update() {
+        lineCount = Int(value)
+    }
+    
     //  MARK:   - BODY
     
     var body: some View {
@@ -24,8 +29,14 @@ struct SettingsView: View {
             Text("Lines: \(lineCount)".uppercased())
                 .fontWeight(.bold)
             // Slider
-            Slider(value: $value, in: 1...4, step: 1)
+            Slider(value: Binding(get: {
+                self.value
+            }, set: {(newValue ) in
+                self.value = newValue
+                self.update()
+            }), in: 1...4, step: 1)
                 .accentColor(.accentColor)
+            
             
             
         } //: VSTACK

@@ -356,4 +356,18 @@ Notice the code we add to the gear image in Detail View.  We also add a state va
 Sure enough, we can navigate with a note and find the setting and info page work, to a point.  We see the slider moving, but the number does not change.   So what do we do?
 
 ## Update Function
-The next step is to create a new function that will make this feature work into the 
+The next step is to create a new function that will make this feature work.
+
+Time index 7:04
+So, how does the new update function get called anytime the setting's slider is changed?  
+We need to replace the existing value binding with a new custom binding.  
+So, we setup closures for the bindings for the Slider.  The rest of the slider's code is unchanged. 
+The newValue parameter is acquired when the slider moves.  The set binding applies this value to the private variable value.  Also, the set binding calls the update function that makes the connection to the User default value.
+
+## Line Limit
+We can copy the property from settings view to content view.  This ensures that the content view will set this user default on loading, assuming it is not already there.  If it is, then the user default takes precidence.   
+We also apply this value to the line limit in the list.
+## Testing
+Sure enough the settings do get applied to the line limit in the list.  You have to go into a detail view to set these settings.   Does it work from settings on the watch itself?
+No?  What is the magic sauce?
+
