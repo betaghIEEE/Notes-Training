@@ -17,7 +17,7 @@
 		278F5F39274DA24C00969C31 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278F5F38274DA24C00969C31 /* ComplicationController.swift */; };
 		278F5F3B274DA24D00969C31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278F5F3A274DA24D00969C31 /* Assets.xcassets */; };
 		278F5F3E274DA24D00969C31 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278F5F3D274DA24D00969C31 /* Preview Assets.xcassets */; };
-		278F5F50274DA2DA00969C31 /* NotesOnNotes.md in Resources */ = {isa = PBXBuildFile; fileRef = 278F5F4E274DA2D900969C31 /* NotesOnNotes.md */; };
+		278F5F50274DA2DA00969C31 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 278F5F4E274DA2D900969C31 /* Readme.md */; };
 		278F5F51274DA2DA00969C31 /* notesPictures in Resources */ = {isa = PBXBuildFile; fileRef = 278F5F4F274DA2D900969C31 /* notesPictures */; };
 		278F5F55274F055A00969C31 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278F5F54274F055A00969C31 /* Note.swift */; };
 		27F2431B2759690E0058A959 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F2431A2759690E0058A959 /* DetailView.swift */; };
@@ -82,7 +82,7 @@
 		278F5F3D274DA24D00969C31 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		278F5F3F274DA24D00969C31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		278F5F40274DA24D00969C31 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		278F5F4E274DA2D900969C31 /* NotesOnNotes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = NotesOnNotes.md; sourceTree = "<group>"; };
+		278F5F4E274DA2D900969C31 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		278F5F4F274DA2D900969C31 /* notesPictures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = notesPictures; sourceTree = "<group>"; };
 		278F5F54274F055A00969C31 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		27F2431A2759690E0058A959 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 		278F5F15274DA24900969C31 = {
 			isa = PBXGroup;
 			children = (
-				278F5F4E274DA2D900969C31 /* NotesOnNotes.md */,
+				278F5F4E274DA2D900969C31 /* Readme.md */,
 				278F5F4F274DA2D900969C31 /* notesPictures */,
 				278F5F24274DA24900969C31 /* Notes WatchKit App */,
 				278F5F2F274DA24C00969C31 /* Notes WatchKit Extension */,
@@ -284,7 +284,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				278F5F50274DA2DA00969C31 /* NotesOnNotes.md in Resources */,
+				278F5F50274DA2DA00969C31 /* Readme.md in Resources */,
 				278F5F51274DA2DA00969C31 /* notesPictures in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
